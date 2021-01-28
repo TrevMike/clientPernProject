@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
-import axios from "axios";
+import { Link } from "react-router-dom";
+// import axios from "axios";
 function Register({ setAuth }) {
   const [inputs, setInputs] = useState({
     email: "",

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,6 +9,7 @@ import {
 import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Test from "./components/Test";
 import "./App.css";
 
 function App() {
@@ -105,6 +106,9 @@ function App() {
                 )
               }
             />
+            <Route exact path="/">
+              <Test />
+            </Route>
           </Switch>
         </div>
       </Router>
