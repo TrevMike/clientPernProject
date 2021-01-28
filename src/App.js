@@ -106,9 +106,17 @@ function App() {
                 )
               }
             />
-            <Route exact path="/">
-              <Test />
-            </Route>
+            <Route
+              exact
+              path="/"
+              render={(props) =>
+                isAuth ? (
+                  <Test {...props} setAuth={setAuth} />
+                ) : (
+                  <Redirect to="/login" />
+                )
+              }
+            />
           </Switch>
         </div>
       </Router>
