@@ -46,10 +46,13 @@ function App() {
   // }
   const checkAuthenticated = async () => {
     try {
-      const res = await fetch("http://localhost:5000/auth/is_verified", {
-        method: "POST",
-        headers: { token: localStorage.token },
-      });
+      const res = await fetch(
+        "https://pharrprojectserver.herokuapp.com/auth/is_verified",
+        {
+          method: "POST",
+          headers: { token: localStorage.token },
+        }
+      );
 
       const parseRes = await res.json();
 

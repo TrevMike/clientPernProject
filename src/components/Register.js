@@ -39,13 +39,16 @@ function Register({ setAuth }) {
     try {
       const body = { email, password, name };
 
-      const response = await fetch("http://localhost:5000/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(body),
-      });
+      const response = await fetch(
+        "https://pharrprojectserver.herokuapp.com/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(body),
+        }
+      );
       console.log(body);
       //   console.log(response.json());
       const parseRes = await response.json();

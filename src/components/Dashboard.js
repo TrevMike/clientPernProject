@@ -4,10 +4,13 @@ function Dashboard({ setAuth }) {
   const [name, setName] = useState("");
   async function getName() {
     try {
-      const res = await fetch("http://localhost:5000/dashboard", {
-        method: "POST",
-        headers: { token: localStorage.token },
-      });
+      const res = await fetch(
+        "https://pharrprojectserver.herokuapp.com/dashboard",
+        {
+          method: "POST",
+          headers: { token: localStorage.token },
+        }
+      );
 
       const parseData = await res.json();
       // console.log(parseData.user_name);
