@@ -113,7 +113,7 @@ function App() {
                 isAuth ? (
                   <Test {...props} setAuth={setAuth} />
                 ) : (
-                  <Redirect to="/login" />
+                  <Redirect to="/register" />
                 )
               }
             />
