@@ -54,7 +54,7 @@ function App() {
           headers: { token: localStorage.token },
         }
       );
-
+      //test
       const parseRes = await res.json();
 
       parseRes === true ? setIsAuth(true) : setIsAuth(false);
